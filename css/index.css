@@ -759,7 +759,7 @@ html,body{
 	background: #ce9471;
 	transition: all .5s;
 }
-.worksBgAc{
+.worksBg.worksBgAc{
 	top: 0;
 	width: 100%;
 	background:linear-gradient(to bottom, rgba(206,148,113,0.5) 4%,rgba(206,148,113,1) 19%,rgba(206,148,113,1) 18%)
@@ -1001,5 +1001,50 @@ footer{
 	}
 	.platText h2{
 		font-size: 3rem;
+	}
+	.worksBg{
+		top: 10rem;
+		width: 88%;
+	}
+	.worked{
+		margin-top: 0rem;
+		padding: 4rem 5%;
+	}
+	.showWorks h3{
+		font-size: 3rem;
+	}
+	.showWorks{
+		padding-top: 1%;
+	}
+	.projectShow{
+		overflow: auto;
+	}
+	.myProject{
+		padding-top:2rem;
+	}
+	.myProject h3{
+		font-size: 3rem;
+	}
+	.projectList li{
+		width: 85%;
+	}
+	.photoWall>h3{
+		position: static;
+		font-size: 3rem;
+	}
+	.photoWall ul{
+		padding: 0;
+	}
+	.photoWall li{
+		width: 30% !important;
+		margin: 0 1.5%;
+		vertical-align: bottom;
+	}
+	.footerText{
+		position: relative;
+	}
+	.footBg{
+		position: absolute;
+		bottom: 0;
 	}
 }
