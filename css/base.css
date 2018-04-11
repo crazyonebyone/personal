@@ -1,0 +1,22 @@
+div,span,b,em,i,li,a,ul,ol,nav,table,body,p,header,footer,{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-style: normal;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #333333;
+}
+body,html{
+	transition: all 1s;
+}
+ul,ol{
+	list-style: none;
+}
+.clearSpace{
+	font-size: 0;
+	letter-spacing: 0;
+}

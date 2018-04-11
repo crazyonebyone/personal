@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>asd</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<body>
+		<div id="allContent">
+			<div class="behind-img"></div>
+		<div id="Content">
+			<div class="ShadowUp"></div>
+			<div class="Shadowdown hidden-xs"></div>
+			<div class="ShadowUpG"></div>
+			<div class="ShadowdownG hidden-xs"></div>
+			<!--头部开始-->
+			<div class="Header hidden-xs">
+				<div class="Header-con">
+					<div class="logo-col">
+						<a href="index.html">
+							<img src="images/logo.png" />
+						</a>
+					</div>
+					<nav class="navbar navbar-default" role="navigation">
+		  				<div class="container">
+		  					 <div class="nav-left">
+								<ul>
+									<li class="toFirst"><a href="javascript:;">蔡帅</a></li>
+									<li class="toMyMmusic"><a href="javascript:;">音乐</a></li>
+									<li class="toDream"><a href="javascript:;">梦想</a></li>
+									<li class="toProject"><a href="javascript:;">作品</a></li>
+								</ul>
+							</div>
+							<div class="nav-right">
+								<ul>
+									<li class="toLife"><a href="javascript:;">生活</a></li>
+									<li class="toContact"><a href="javascript:;">接触</a></li>
+								</ul>
+							</div>
+		  				</div>
+					</nav>
+				</div>
+				<span class="nav-hr"></span>
+			</div>
+			<!--头部结束-->
+			
+			<!--手机端菜单-->
+			<div class="mobile-menu prevent hidden-sm hidden-lg hidden-md">
+				<div class="mobileTopNav clearfix">
+					<a href="index.html">
+						<img src="images/logo.png" />
+					</a>
+					<div class="MenuBth MenuClose">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	               </div>
+				</div>
+				
+				<div class="xsMenu">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								个 人
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								音 乐
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								梦 想
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								作 品
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								关 于
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								接 触
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--蔡帅拼音-->
+			<div class="ImporFont">
+				<div class="font-con">
+					<span>C</span>
+					<span>A</span>
+					<span>I</span>
+					<span>S</span>
+					<span>H</span>
+					<span>U</span>
+					<span>A</span>
+					<span>I</span>
+				</div>
+				
+			</div>
+			
+			<div class="Scoll-down">
+				<div class="Scoll-con">
+					<p>向下滚动更多内容 </p>
+					<span>
+						<span></span>
+					</span>
+					
+				</div>
+			</div>
+			<div class="footer-sticky hidden-xs">
+				<div class="footer-con">
+					<div class="row">
+						<div class="Connect-left col-md-8">
+							<div class="footer-label">
+								<p>分享至以下途径</p>
+							</div>
+							<div class="footer-links">
+								<a href="#" class="glyphicon glyphicon-send"></a>
+								<a href="#" class="glyphicon glyphicon-flash"></a>
+								<a href="#" class="glyphicon glyphicon-envelope"></a>
+								<a href="#" class="glyphicon glyphicon-globe"></a>
+							</div>
+						</div>
+						<!--<div class="Connect-right col-md-8">
+							<div class="footer-label">
+								<p>听听他的歌曲</p>
+							</div>
+							<div class="footer-links">
+								<a href="#" class="glyphicon glyphicon-phone"></a>
+								<a href="#" class="glyphicon glyphicon-music"></a>
+								<a href="#" class="glyphicon glyphicon-bell"></a>
+								<a href="#" class="glyphicon glyphicon-headphones"></a>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--第二页文字页-->
+		<div class="page2">
+			<div class="showFont1">
+				<p>有你的地方更美丽</p>
+			</div>
+			<div class="showFont2">
+				<p>珍惜如今更待何时</p>
+			</div>
+		</div>
+		
+		<!--第三页播放器页-->
+		<div class="page3" id="myMusic">
+			<div class="page3-con">
+				<div class="page3-con-center container-fluid">
+					<div class="center-content row">
+						<div class="player col-xs-12 col-sm-6" id="player">
+							<div class="player-all">
+								<div class="player-con">
+									<div class="radioHead clearfix">
+										<audio  v-bind:src="firstData.audiosrcSrc" v-bind:data-id="firstData.id" preload="metadata" id="CaiPlayer"></audio>
+										<div class="songImg">
+											<img v-bind:src="firstData.imgSrc" class="songImage" />
+											<img src="images/Play.png" id='musicAudioPlayAndPause'  class="songPlay" v-on:click="playOrPaused" />
+										</div>
+										<div class="songInfo">
+											<div class="songNameInfo">
+												<p class="songName">{{firstData.songName}}</p>
+												<p class="songWriter">{{firstData.writer}}</p>
+											</div>
+											<div class="songSpeed clearfix">
+												<img src="images/playUp.png"/>
+												<div class="progress_con">
+													<span></span>
+												</div>
+												<img src="images/playDown.png"/>
+												<span class="playTime">{{firstData.time}}</span>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="player-list">
+									<ul>
+										<li v-for="(site,index) in data">
+											<a href="javascript:;" v-on:click="choosePlay(site)" v-bind:class="{'clearSpace':true,'songPlayAc':site.id==playId}">
+												<span>{{index+1}}</span>
+												<div class="songDetail">
+													<p>{{site.songName}}</p>
+													<span>{{site.writer}}</span>
+												</div>
+												<b>{{site.time}}</b>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="share col-xs-12 col-sm-6">
+							<div class="myMusicDetail">
+								<h3>我的音乐</h3>
+								<div class="showIntroduce">
+									<p>这是我最喜欢的歌曲</p>
+									<p>其中还有自己弹奏的哦</p>
+								</div>
+								<div class="verse">
+									<article>
+										<section>人生就是一场场偶遇</section>
+										<section>也许我们就看对眼了</section>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--播放器结束-->
+		<!--第四页个人计划-->
+		<div class="blackBgContent">
+			<div class="myPlan">
+				<div class="planTitle">
+					<div class="planBgShow">
+						<img src="images/sup-valaire-band.jpg" />
+						<img src="images/sup-valaire-band.jpg" />
+						<img src="images/sup-valaire-band.jpg" />
+					</div>
+					<div class="platText">
+						<h2>我的爱好是？</h2>
+					</div>
+				</div>
+				<div class="planList clearfix">
+					<ul class="col-sm-11 col-xs-12">
+						<li class="clearfix">
+							<div class="dreamImg col-sm-6 col-xs-10">
+								<img src="images/guitar.jpg"/>
+								<img src="images/guitar.jpg"/>
+								<img src="images/guitar.jpg"/>
+								<img src="images/guitar.jpg"/>
+							</div>
+							<div class="dreamText col-sm-6 col-xs-12">
+								<h3>指弹吉他</h3>
+								<p>嘈杂环境，<br />喧闹社会，<br />静坐指弹。</p>
+								<p>雨滴屋外，<br />香漫四周，<br />琴音绕弦。</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="dreamText dreamLeftText col-sm-6 col-xs-12">
+								<h3>周游各地</h3>
+								<p>我想游遍大海山川，<br />阅历各地文化，<br />世界不应该这么小。</p>
+								<p>我想赏尽自然风貌，<br />看光世间百态，<br />芸芸世间皆在眼底。</p>
+							</div>
+							<div class="dreamImg dreamRightImg col-sm-6 col-xs-10">
+								<img src="images/traval.jpg"/>
+								<img src="images/traval.jpg"/>
+								<img src="images/traval.jpg"/>
+								<img src="images/traval.jpg"/>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="dreamImg dreamLeftImg col-sm-6 col-xs-10">
+								<img src="images/book.jpg"/>
+								<img src="images/book.jpg"/>
+								<img src="images/book.jpg"/>
+								<img src="images/book.jpg"/>
+							</div>
+							<div class="dreamText col-sm-6 col-xs-12">
+								<h3>看书</h3>
+								<p>朱门退公后，<br />高兴对花枝。</p>
+								<p>望阙无穷思，<br />看书欲尽时。</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="myWorks">
+				<div class="worksBg"></div>
+				<div class="waorksHead">
+					<img src="images/upcoming-tours.jpg"/>
+				</div>
+				<div class="showWorks">
+					<h3>我加入过一些很棒的团队</h3>
+					<div class="worked">
+						<ul>
+							<li>
+								<h4>2017-2018</h4>
+								<div class="clearSpace">
+									<b>珠海易奇科技有限公司</b>
+									<p>担任项目经理</p>
+									<a href="http://new.eqlee.com">了解更多<span class="glyphicon glyphicon-arrow-right"></span></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="myProject">
+					<h3>看看我的作品吧</h3>
+					<div class="projectShow">
+						<ul class="projectList clearSpace">
+							<li>
+								<img src="images/harmony.jpg"/>
+								<div>
+									<b>亨吉利官方商城</b>
+									<p>亨吉利世界名表中心<br />腕表购买、<br />维修、<br />个性定制、<br />资讯</p>
+									<a href="http://www.harmonywatch.com"><span>去看一下</span><b class="glyphicon glyphicon-hand-right"></b></a>
+								</div>
+							</li>
+							<li>
+								<img src="images/harmonyOTO.jpg"/>
+								<div>
+									<b>亨吉利OTO门店系统</b>
+									<p>亨吉利世界名表中心<br />腕表查询、<br />会员、<br />维修信息、<br />资讯</p>
+									<a href="http://store.harmony4s.com"><span>去看一下</span><b class="glyphicon glyphicon-hand-right"></b></a>
+								</div>
+							</li>
+							<li>
+								<img src="images/akauto.jpg"/>
+								<div>
+									<b>珠海珠光汽车官方网站</b>
+									<p>珠海珠光汽车<br />汽车销售、<br />配件、<br />维修、<br />驾校</p>
+									<a href="http://www.zkauto.com"><span>去看一下</span><b class="glyphicon glyphicon-hand-right"></b></a>
+								</div>
+							</li>
+							<li>
+								<img src="images/fiytaB2b.jpg"/>
+								<div>
+									<b>飞亚达经销商选货系统</b>
+									<p>飞亚达手表<br />腕表采购、<br />经销商管理、<br />地区仓管理、<br />通知信息</p>
+									<a href="http://btb.fiyta.com.cn"><span>去看一下</span><b class="glyphicon glyphicon-hand-right"></b></a>
+								</div>
+							</li>
+							<li>
+								<img src="images/ulike.jpg"/>
+								<div>
+									<b>友莱商城</b>
+									<p>产品购买<br />会员积分、<br />分销系统、<br />送礼、<br />保养</p>
+									<a href="http://m.zh-ulike.com"><span>去看一下</span><b class="glyphicon glyphicon-hand-right"></b></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--照片墙-->
+			<div class="photoWall">
+				<h3>我的生活</h3>
+				<ul class="clearSpace">
+					<li>
+						<img src="images/personal/1.jpg"/>
+					</li>
+					<li>
+						<img src="images/personal/2.jpg"/>
+					</li>
+					<li>
+						<img src="images/personal/3.jpg"/>
+					</li>
+					<li>
+						<img src="images/personal/4.jpg"/>
+					</li>
+					<li>
+						<img src="images/personal/5.jpg"/>
+					</li>
+					<li>
+						<img src="images/personal/6.jpg"/>
+					</li>
+					<li>
+						<img src="images/personal/7.jpg"/>
+					</li>
+				</ul>
+			</div>
+			</div>
+			
+			<!--尾部-->
+			<footer>
+				<div class="footBg">
+					<img src="images/footer-bkg.jpg"/>
+				</div>
+				<div class="footerText">
+					<div class="contactMe">
+						<h3>联系我</h3>
+						<div class="contactList">
+							<ul>
+								<li>
+									<span class="glyphicon glyphicon-phone"></span>：
+									<i>13160657696</i>
+								</li>
+								<li>
+									<span class="glyphicon glyphicon-envelope"></span>：
+									<i>caishuaiweb@foxmail.com</i>
+								</li>
+								<li>
+									<div class="weixin">
+										<img src="images/QrWeixin.png"/>
+										<p>微信</p>
+									</div>
+									<div class="twitter">
+										<img src="images/qrTwitter.jpg"/>
+										<p>twitter</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<b>Create By Caishuai(Medivh)</b>
+				</div>
+			</footer>
+		</div>
+			
+		</div>
+	</body>
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

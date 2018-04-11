@@ -1,0 +1,35 @@
+[
+	{
+		"id":1,
+		"songName":"风之诗",
+		"writer":"Cover押尾桑",
+		"time":"03:56",
+		"audiosrcSrc":"audio/WindSong/WindSong.mp3",
+		"imgSrc":"audio/WindSong/2.jpg"
+	},
+	{
+		"id":2,
+		"songName":"Flower",
+		"writer":"Cover岸部真明",
+		"time":"03:04",
+		"audiosrcSrc":"audio/Flower/Flower.mp3",
+		"imgSrc":"audio/Flower/2.jpg"
+	},
+	{
+		"id":3,
+		"songName":"Love Story",
+		"writer":"taylor swift",
+		"time":"13:45",
+		"audiosrcSrc":"audio/LoveStory/TaylorSwift-LoveStory.mp3",
+		"imgSrc":"audio/LoveStory/2.jpg"
+	},
+	{
+		"id":4,
+		"songName":"Our Song",
+		"writer":"taylor swift",
+		"time":"13:45",
+		"audiosrcSrc":"audio/OurSong/TaylorSwift-oursong.mp3",
+		"imgSrc":"audio/OurSong/2.jpg"
+	}
+	
+]
