@@ -883,6 +883,20 @@ html,body{
 	font-size: 2rem;
 	margin-bottom: 2rem;
 }
+.projectList a>span,.projectList a>i{
+	color: #224227;
+	transition: all .3s;
+}
+.projectList a:hover{
+	text-decoration: none;
+}
+.projectList a:hover>i{
+	color: #f5f5f5;
+	transform: translateX(50%);
+}
+.projectList li>div i{
+	margin-left: 1%;
+}
 .projectList li:hover>div{
 	opacity: 1;
 	transform: translateY(0);
